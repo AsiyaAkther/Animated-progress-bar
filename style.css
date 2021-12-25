@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+.skill-container{
+    width:500px;
+    padding:20px;
+    background-color: darkmagenta;
+}
+.skill-container ul li{
+    font-weight: bolder;
+    margin: 50px 0px;
+    color:white;
+    text-transform: uppercase;
+    list-style-type: none;
+    position: relative;
+}
+.skill-container ul li::before{
+    content:'';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    background-color: rgb(170,167,173);
+    width:100%;
+    height:25px;
+    border-radius: 50px;
+}
+.skill-container ul li::after{
+    content:'';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    background-color: rgb(249,249,250);
+    width:0;
+    height:25px;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: forward;
+}
+.skill-container ul li.html::after{
+    animation-name: html;
+}
+.skill-container ul li.css::after{
+    animation-name: css;
+}
+.skill-container ul li.boostrap::after{
+    animation-name: boostrap;
+}
+.skill-container ul li.js::after{
+    animation-name: js;
+}
+.skill-container ul li.php::after{
+    animation-name: php;
+}
+.skill-container ul li.java::after{
+    animation-name: java;
+}
+@keyframes html {
+    to{
+        width:90%;
+    }
+}
+@keyframes css {
+    to{
+        width:75%;
+    }
+}
+@keyframes boostrap {
+    to{
+        width:85%;
+    }
+}
+@keyframes js {
+    to{
+        width:50%;
+    }
+}
+@keyframes php {
+    to{
+        width:40%;
+    }
+}
+@keyframes java {
+    to{
+        width:90%;
+    }
+}
